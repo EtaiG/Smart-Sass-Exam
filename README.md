@@ -11,9 +11,13 @@ How can the compilation be optimized? If compilation of a sass a file would have
 
 The module should receive an array of source directories/patterns as input, i.e. using [glob](https://github.com/isaacs/node-glob), [minimatch](https://github.com/isaacs/minimatch) or the like, for example:
 ```
-['src/components/**/*', 'src/widgets/**/*']
+['components/**/*', 'widgets/**/*']
 ```
-The pattern represents where the Sass files are located, and a target directory root which represents where the css files are written to using the same patterns applied to the target root directory.
+
+The pattern represents where the Sass files are located, and a **target directory root**, such as ```'target/'``` which represents where the css files are written to using the same patterns of the source files, applied to the target root directory.
+
+For example, if you received  ```['components/**/*', 'widgets/**/*']``` as a the source patterns, then the css would be written at  ```['target/components/**/*', 'target/widgets/**/*']``` respectively. 
+
 
 Your output should be an array of the files which need to be compiled.
 
