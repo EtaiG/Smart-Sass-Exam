@@ -27,8 +27,6 @@ Your output should be an array of the files which need to be compiled.
 >  * If it's synchronous, it should return an array of the filepaths which need to be compiled by Sass.
 >  * If it's asynchronous, it should also accept a callback, which will be called upon completion with an array of the filepaths as the argument to the callback.
 > 4. Your submission should also wrap the module and log the result to the system console.
-> 5. **Bonus points**: write it TDD style with good test coverage.
-
 
 A **synchronous** version of the exported module should have the following signature:
 ```js
